@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.navbar-gradient {
+  background: linear-gradient(to right, #129e58, #00374b);
+}
+
+.nav-link {
+  @apply relative text-gray-700 font-medium;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
