@@ -124,6 +124,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Add structured data for SEO */}
+        <meta
+          name="google-site-verification"
+          content="MmEvIvpoACU9tJ5PypKnQwkiid054uCMC8I4oLfiJis"
+        />
         <Script
           id="organization-schema"
           type="application/ld+json"
